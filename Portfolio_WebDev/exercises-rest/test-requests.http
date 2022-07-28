@@ -1,0 +1,73 @@
+###
+POST http://localhost:3000/exercises HTTP/1.1
+content-type: application/json
+
+{
+    "name": "felicia",
+    "reps": 2,
+    "weight": 50,
+    "unit": "lbs",
+    "date": "12-21-24"
+}
+
+###
+GET http://localhost:3000/exercises HTTP/1.1
+
+###
+GET http://localhost:3000/exercises/629a3497247523b9dc96b461 HTTP/1.1
+
+###
+
+PUT http://localhost:3000/exercises/629a3cb2dd2535c3f2da69df HTTP/1.1
+content-type: application/json
+
+{
+    "name": "bobby",
+    "reps": 1111,
+    "weight": 25,
+    "unit": "lbs"
+   
+}
+
+###
+DELETE http://localhost:3000/exercises/629a3497247523b9dc96b461 HTTP/1.1
+
+
+###
+POST http://localhost:3000/exercises HTTP/1.1
+content-type: application/json
+
+{
+    "name": "rick",
+    "reps": 5,
+    "weight": 40,
+    "unit": "lbs",
+    "date": "12-21-15"
+}
+
+###
+POST http://localhost:3000/exercises HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Jim",
+    "reps": 24,
+    "weight": 45,
+    "unit": "lbs",
+    "date": "12-22-24"
+}
+
+###
+POST http://localhost:3000/exercises HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Bob",
+    "reps": 50,
+    "weight": 42,
+    "unit": "lbs",
+    "date": "5-21-24"
+}
+
+
+

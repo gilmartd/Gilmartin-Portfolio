@@ -1,0 +1,101 @@
+body{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: rgb(26, 13, 18);
+  color: rgb(236, 240, 9);
+  padding: 50px;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: calc(10px + 2vmin);
+ 
+}
+
+table{
+ 
+  flex-direction: column;
+  align-items: center;
+  
+}
+h2{
+  color: rgb(245, 170, 8);
+  font-family:serif;
+  
+}
+
+tr th{
+  border: solid;
+  color: rgb(226, 92, 3);
+  padding: 10px;
+  padding-right: 50px;
+  padding-left: 50px;
+  
+}
+
+tr td{
+  color: rgb(245, 75, 8);
+  border: solid rgb(12, 236, 12);
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+h1{
+  color: rgb(236, 145, 127);
+  font-family:fantasy;
+}
+
+fieldset{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+legend{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+input{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: calc(10px + 2vmin);
+}
+
+button{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: calc(10px + 2vmin);
+}
+.App {
+  text-align: center;
+
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+#addnew{
+  padding: 15px;
+  color: red
+}
+
+.editrow{
+    color: rgb(245, 75, 8);
+  border: solid rgb(12, 236, 12);
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: rgb(26, 13, 18);
+  font-size: calc(10px + 1vmin);
+}
+
+
+.App-link {
+  color: #08ff3e;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
