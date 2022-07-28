@@ -1,6 +1,11 @@
 # Gilmartin-Portfolio
 (Display Source Blob for easy reading)
 
+Portfolio projects:
+Web-Dev: Full Stack MERN App using JavaScript, REACT, and Mongoose DB.
+Data Structures: Hash Map implementation using Python.
+Usability Engineering: Prototype of a drink-maker app using figma.com
+
 Currently 8  classes from completing a BS in Computer Science.
 
 Classes left:
