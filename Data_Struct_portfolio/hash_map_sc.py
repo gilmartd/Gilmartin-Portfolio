@@ -50,7 +50,7 @@ class HashMap:
         """
         return self._capacity
 
-    # ------------------------------------------------------------------ #
+    # --------------CODE ABOVE THIS LINE WAS PROVIDED BY THE ISNTRUCTOR---------------------------------------------------- #
 
     def put(self, key: str, value: object) -> None:
         """
