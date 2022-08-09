@@ -1,0 +1,10 @@
+{%extends "base.html"%}
+<title>{% block title %}PileofDirt.com{% endblock %}</title>
+
+{% block content %}
+    <body>
+    <div>    <img src="{{url_for('static', filename='volume_graph.png')}}">
+</div>
+
+{% endblock %}
+

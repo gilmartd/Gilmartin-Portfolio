@@ -1,0 +1,57 @@
+{%extends "base.html"%}
+<title>{% block title %}PileofDirt.com{% endblock %}</title>
+
+{% block content %}
+    <h1> Your ratio is {{ ratio }}</h1>
+    <h2> Optimum Carbon:Nitrogen ratio is 30:1</h2>
+<br>
+<br>
+ <h3 align = "center">Add to your pile</h3>
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Ingredient</th>
+      <th scope="col">Volume(cubic feet)</th>
+
+    </tr>
+  </thead>
+  <tbody>
+  <form method="POST" class = form->
+    <tr>
+      <td>  <select class="col-8" id="ingredient" name ='ingredient'>
+            <optgroup label="Greens"></optgroup>
+            <option value="20">Coffee Grounds 20:1</option>
+            <option value="12">Vegetable Trimmings 12:1</option>
+            <option value="15">Food Scraps 15:1</option>
+            <option value="18">Spent Brewery Grains 18:1</option>
+            <option value="6">Chicken Manure 6:1</option>
+            <option value="30">Dairy Cow Manure 30:1</option>
+            <option value="16">Tree Trimmings 16:1</option>
+            <option value="20">Weeds 20:1</option>
+            <option value="25">Hay 25:1</option>
+            <optgroup label="Browns"></optgroup>
+            <option value="560">Wood Chips 560:1</option>
+            <option value="60">Corn Stalks 60:1</option>
+            <option value="54">Dry Leaves 54:1</option>
+            <option value="80">Pine Needles 80:1</option>
+            <option value="128">Office Paper 128:1</option>
+            <option value="625">Saw Dust 625:1</option>
+            <option value="563">Cardboard 563:1</option>
+            <option value="90">Coco Coir 90:1</option>
+            <option value="53">Shrub Trimmings 53:1</option>
+    </select> </td>
+      <td><input type="number"
+               class="col-6"
+               id="volume"
+               name="volume"></td>
+      </tr>
+      <td> <button type="submit" class = "btn btn-primary"> Add it to pile!</button></td>
+      </form>
+    </tbody>
+</table>
+
+  <form>
+
+      <button type = "submit" class = "btn btn-danger" onClick = "deletePile()"> Delete your Pile  </button>
+  </form>
+{% endblock %}
