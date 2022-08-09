@@ -1,0 +1,84 @@
+<html>
+<head>
+    <title>HP - Athletes</title>
+</head>
+<body>
+    <a href="/">Home</a> ||
+    <a href="/trainers">Browse Trainers</a> ||
+    <a href="/exercises">Edit Exercises</a> ||
+    <a href="/workouts">Manage Workouts</a>
+    <h1>BROWSE ATHLETES</h1>
+    <table border="1" cellpadding="5">
+    <thead>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>DOB</th>
+        <th>Start Weight</th>
+        <th>Last Weight</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Trainer ID</td>
+    </tr>
+    <tbody>
+    {% for item in athletes %}
+            <tr>
+                <td>{{item.firstName}}</td>
+                <td>{{item.lastName}}</td>
+                <td>{{item.DOB}}</td>
+                <td>{{item.startWeight}}</td>
+                <td>{{item.currentWeight}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.phone}}</td>
+                <td>{{item.trainerID}}</td>
+            </tr>
+    {% endfor %}
+    </table>
+
+    <h2>ADD ATHLETE:</h1>
+    <form method="post">
+        <label for="firstName">First Name:</label>
+        <input type="text" name="firstName"
+               placeholder="First Name"
+               value="{{ request.form['firstName'] }}"></input>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="lastName"
+                  placeholder="Last Name"
+                  >{{ request.form['lastName'] }}</input>
+
+        <label for="DOB">DOB:</label>
+        <input type="date" name="DOB"
+                  >{{ request.form['DOB'] }}</input>
+
+        <br>
+        <label for="startWeight">Start Weight:</label>
+        <input type="number" name="startWeight"
+                  >{{ request.form['startWeight'] }}</input>
+
+        <label for="currentWeight">Current Weight:</label>
+        <input type="number" name="currentWeight"
+                  >{{ request.form['currentWeight'] }}</input>
+
+        <label for="email">Email:</label>
+        <input type="text" name="email"
+               placeholder="example@gmail.com"
+               value="{{ request.form['email'] }}"></input>
+        
+        <label for="phone">Phone:</label>
+        <input type="text" name="phone"
+               placeholder="3198675309"
+               value="{{ request.form['phone'] }}"></input>
+        <br>
+        <input type="submit" value="Add Athlete" name="addAthlete"/>
+    </form>
+    <h2>SEARCH Athlete:</h2>
+    <form method="post">
+        <label for="name">First Name:</label>
+        <input type="text" name="search_name"
+                placeholder="First Name"
+                value="{{ request.form['search_name'] }}"></input>
+        <input type="submit" value="Search Athlete" name="searchAthlete"/>
+    </form>
+</body>
+</html>

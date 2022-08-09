@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>HP Fitness Tracker</title>
+</head>
+<body>
+    <a href="/athletes">Browse Athletes</a> ||
+    <a href="/trainers">Browse Trainers</a> ||
+    <a href="/exercises">Browse Exercises</a> ||
+    <a href="/">Home</a> ||
+    <a href="/workouts">Manage Workouts</a>
+    <h1>Search Results for {{ type }}</h1>
+    <table border="1" cellpadding="5">
+    <thead>
+        <tr>
+        {% for header in headers %}
+            <th>{{ header }}</th>
+        {% endfor %}
+        </tr>
+    <tbody>
+        {% for item in results %}
+                <tr>
+                    <td>{{item.firstName}}</td>
+                    <td>{{item.lastName}}</td>
+                    <td>{{item.DOB}}</td>
+                    <td>{{item.startWeight}}</td>
+                    <td>{{item.currentWeight}}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.phone}}</td>
+                    <td>{{item.trainerID}}</td>
+                </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

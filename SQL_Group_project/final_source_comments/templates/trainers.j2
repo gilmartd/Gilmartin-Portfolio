@@ -1,0 +1,68 @@
+<html>
+<head>
+    <title>HP - Trainers</title>
+</head>
+<body>
+    <a href="/athletes">Browse Athletes</a> ||
+    <a href="/">Home</a> ||
+    <a href="/exercises">Edit Exercises</a> ||
+    <a href="/workouts">Manage Workouts</a>
+    <h1>BROWSE TRAINERS</h1>
+    <table border="1" cellpadding="5">
+    <thead>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>CERT</th>
+        <th>CPR</th>
+        <th>Email</th>
+        <th>Phone</th>
+    </tr>
+    <tbody>
+    {% for item in trainers %}
+            <tr>
+                <td>{{item['firstName']}}</td>
+                <td>{{item['lastName']}}</td>
+                <td>{{item['CERT']}}</td>
+                <td>{{item['CPR']}}</td>
+                <td>{{item['email']}}</td>
+                <td>{{item['phone']}}</td>
+            </tr>
+    {% endfor %}
+    </table>
+
+    <h2>ADD Trainer:</h1>
+    <form method="post">
+        <label for="firstName">First Name:</label>
+        <input type="text" name="firstName"
+               placeholder="First Name"
+               value="{{ request.form['firstName'] }}"></input>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="lastName"
+                  placeholder="Last Name"
+                  >{{ request.form['lastName'] }}</input>
+
+        <label for="CERT">CERT:</label>
+        <input type="number" name="CERT"
+                  >{{ request.form['CERT'] }}</input>
+
+        <label for="CPR">CPR:</label>
+        <input type="number" name="CPR"
+                  >{{ request.form['CPR'] }}</input>
+
+        <br>
+        <label for="email">Email:</label>
+        <input type="text" name="email"
+               placeholder="example@gmail.com"
+               value="{{ request.form['email'] }}"></input>
+        
+        <label for="phone">Phone:</label>
+        <input type="text" name="phone"
+               placeholder="3198675309"
+               value="{{ request.form['phone'] }}"></input>
+        <br>
+        <input type="submit" value="Add Trainer" name="addTrainer"/>
+    </form>
+</body>
+</html>

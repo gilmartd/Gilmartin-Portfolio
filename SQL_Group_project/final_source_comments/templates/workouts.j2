@@ -1,0 +1,145 @@
+<html>
+<head>
+    <title>HP - Workout Overviews</title>
+</head>
+<body>
+    <a href="/athletes">Browse Athletes</a> ||
+    <a href="/trainers">Browse Trainers</a> ||
+    <a href="/exercises">Edit Exercises</a> ||
+    <a href="/">Home</a>
+    <h1>BROWSE WORKOUTS</h1>
+    <h2>Workout Overview</h2>
+    <table border="1" cellpadding="5">
+    <thead>
+    <tr>
+        <th>Workout ID</th>
+        <th>Primary Muscle Group</th>
+        <th>Secondary Muscle Group</th>
+        <th>Duration</th>
+        <th>Exercise 1</th>
+        <th>Exercise 2</th>
+        <th>Exercise 3</th>
+        <th>Exercise 4</th>
+        <th>Exercise 5</th>
+        <th>Exercise 6</th>
+        <th>Athlete ID</th>
+    </tr>
+    <tbody>
+    {% for item in workouts %}
+            <tr>
+                <td>{{item.workoutID}}</td>
+                <td>{{item.musclePrimary}}</td>
+                <td>{{item.muscleSecondary}}</td>
+                <td>{{item.duration}}</td>
+                <td>{{item.exercise1}}</td>
+                <td>{{item.exercise2}}</td>
+                <td>{{item.exercise3}}</td>
+                <td>{{item.exercise4}}</td>
+                <td>{{item.exercise5}}</td>
+                <td>{{item.exercise6}}</td>
+                <td>{{item.athleteID}}</td>
+            </tr>
+    {% endfor %}
+    </table>
+    <h2>ADD WORKOUT OVERVIEW:</h2>
+    <form method="post">
+        <label for="musclePrimary">Primary Muscle Group:</label>
+        <input type="text" name="musclePrimary"
+               placeholder="Primary Muscle Group"
+               value="{{ request.form['musclePrimary'] }}"></input>
+
+        <label for="muscleSecondary">Secondary Muscle Group:</label>
+        <input type="text" name="muscleSecondary"
+                  placeholder="Second Muscle Group"
+                  >{{ request.form['muscleSecondary'] }}</input>
+
+        <label for="duration">Duration:</label>
+        <input type="number" name="duration"
+                  >{{ request.form['duration'] }}</input>
+
+        <br>
+        <label for="exercise1">Exercise 1:</label>
+        <input type="text" name="exercise1"
+               placeholder="Exercise 1"
+               value="{{ request.form['exercise1'] }}"></input>
+
+        <label for="exercise1">Exercise 2:</label>
+        <input type="text" name="exercise2"
+               placeholder="Exercise 2"
+               value="{{ request.form['exercise2'] }}"></input>
+        
+        <label for="exercise1">Exercise 3:</label>
+        <input type="text" name="exercise3"
+               placeholder="Exercise 3"
+               value="{{ request.form['exercise3'] }}"></input>
+        
+        <label for="exercise1">Exercise 4:</label>
+        <input type="text" name="exercise4"
+               placeholder="Exercise 4"
+               value="{{ request.form['exercise4'] }}"></input>
+
+        <label for="exercise1">Exercise 5:</label>
+        <input type="text" name="exercise5"
+               placeholder="Exercise 5"
+               value="{{ request.form['exercise5'] }}"></input>
+
+        <label for="exercise1">Exercise 6:</label>
+        <input type="text" name="exercise6"
+               placeholder="Exercise 6"
+               value="{{ request.form['exercise6'] }}"></input>
+        <label for="athlete">Athlete:</label>
+        <select name="athlete">
+            {% for x in athletes %}
+            <option value="{{x.athleteID}}">{{x.firstName}} {{x.lastName}}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <input type="submit" value="Add Workout Summary" name="addWorkoutSummary"/>
+    </form>
+    <br>
+    <h2>Workout Details</h2>
+    <table border="1" cellpadding="5">
+    <thead>
+    <tr>
+        <th>Workout ID</th>
+        <th>Exercise</th>
+        <th>Weight</th>
+        <th>Reps</th>
+    </tr>
+    <tbody>
+    {% for item in workoutdetails %}
+            <tr>
+                <td>{{item.workoutID}}</td>
+                <td>{{item.exerciseID}}</td>
+                <td>{{item.weight}}</td>
+                <td>{{item.reps}}</td>
+            </tr>
+    {% endfor %}
+    </table>
+    <h2>ADD WORKOUT DETAILS</h2>
+    <form method="post">
+        <label for="workoutID">Workout ID:</label>
+        <select name="workoutID">
+            {% for x in workouts %}
+            <option value="{{x.workoutID}}">{{x.workoutID}}</option>
+            {% endfor %}
+        </select>
+        <label for="name">Exercise:</label>
+        <select name="exerciseID">
+            {% for x in exercises %}
+            <option value="{{x.exerciseID}}">{{x.name}}</option>
+            {% endfor %}
+        </select>
+        <label for="reps">Weight:</label>
+        <input type="text" name="weight"
+                  placeholder="weight"
+                  >{{ request.form['weight'] }}</input>
+
+        <label for="reps">Reps:</label>
+        <input type="text" name="reps"
+                  placeholder="reps"
+                  >{{ request.form['reps'] }}</input>
+        <input type="submit" value="Add Workout Details" name="addWorkoutDetails"/>
+    </form>
+</body>
+</html>
