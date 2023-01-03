@@ -11,10 +11,7 @@ Introduction to Databases: Athlete management Flask App with SQL Database<br />
 Currently 5 classes from completing a BS in Computer Science.<br />
 
 <b>Classes left:</b><br />
-Operating Systems<br />
 Analysis of Algorithms<br />
-Programming Language Fundamentals (Breadth class designed to expose students to multiple languages)<br />
-Open Source Software<br />
 Capstone Project<br />
 
 <b>Classes Taken:</b><br />
@@ -28,3 +25,6 @@ Usability Engineering (A)<br />
 Introduction to Databases (A)<br />
 Software Engineering I (Agile Dev, A)<br />
 Software Engineering II  (Course on Testing, B+)<br />
+Operating Systems (C language, A-)<br />
+Programming Language Fundamentals (Breadth class designed to expose students to multiple languages, A)<br />
+Open Source Software (A)<br />
