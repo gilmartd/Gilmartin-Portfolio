@@ -24,7 +24,7 @@ Data Structures (A)<br />
 Usability Engineering (A)<br />
 Introduction to Databases (A)<br />
 Software Engineering I (Agile Dev, A)<br />
-Software Engineering II  (Course on Testing, B+)<br />
+Software Engineering II  (Course on Testing, A)<br />
 Operating Systems (C language, A-)<br />
 Programming Language Fundamentals (Breadth class designed to expose students to multiple languages, A)<br />
 Open Source Software (A)<br />
